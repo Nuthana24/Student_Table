@@ -47,7 +47,7 @@ const [activities, setActivities] = useState(() => {
     addActivity("updated", form.name); // ✅ log update
     setEditId(null);
   } else {
-    await API.post("/students", data);
+    await API.post("/students", form);
     addActivity("added", form.name); // ✅ log add
   }
 
