@@ -43,11 +43,11 @@ const [activities, setActivities] = useState(() => {
   if (!form.name || !form.email || !form.age) return;
 
   if (editId) {
-    await API.put(`/students/${editId}`, form);
+    await API.put(`/students/${editId}`, data);
     addActivity("updated", form.name); // ✅ log update
     setEditId(null);
   } else {
-    await API.post("/students", form);
+    await API.post("/students", data);
     addActivity("added", form.name); // ✅ log add
   }
 
