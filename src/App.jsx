@@ -318,10 +318,9 @@ const addActivity = (type, name) => {
                           onChange={() => handleSelect(s.id)}
                         />
                       </td>
-                      <td data-label="Name">{s.name}</td>
-                      <td data-label="Email">{s.email}</td>
-                      <td data-label="Age">{s.age}</td>
-                      <td data-label="Actions">...</td>
+                      <td>{s.name}</td>
+                      <td>{s.email}</td>
+                      <td>{s.age}</td>
                       <td>
                         <button className="btn edit" onClick={() => handleEdit(s)}>Edit</button>
                         <button className="btn delete" onClick={() => handleDelete(s.id)}>Delete</button>
