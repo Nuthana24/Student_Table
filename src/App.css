@@ -14,28 +14,7 @@ body {
   padding: 30px;
   box-sizing: border-box;
 }
-/* LEFT SIDE ITEMS */
-.stats,
-.form-section,
-.search-section,
-.export-section,
-.table-section {
-  grid-column: 1;
-}
 
-/* RIGHT SIDE ITEMS */
-.chart-section,
-.activity-section {
-  grid-column: 2;
-}
-
-/* STACK RIGHT SIDE */
-.chart-section {
-  grid-row: span 1;
-}
-.activity-section {
-  grid-row: span 1;
-}
 .title {
   font-size: 2.5rem;
   margin-bottom: 30px;
@@ -286,7 +265,7 @@ body {
   }
   .right-panel > .card {
     flex: 1;
-    min-width: 330px;
+    min-width: 300px;
   }
 }
 
@@ -491,133 +470,4 @@ body {
 }
 .bar {
   box-shadow: 0 4px 15px rgba(101, 116, 255, 0.5);
-}
-/* ================= MOBILE RESPONSIVE (ORDER + LAYOUT FIX) ================= */
-@media (max-width: 768px) {
-
-  /* FULL WIDTH */
-  .dashboard {
-    padding: 15px;
-  }
-
-  /* MAIN GRID → STACK */
-  .main-body-content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* ORDER CONTROL (your exact requirement) */
-  .stats-container {
-    order: 1;
-  }
-
-  .form {
-    order: 2;
-  }
-
-  .search-wrapper {
-    order: 3;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-
-  .export-container {
-    order: 4;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .table {
-    order: 5;
-  }
-
-  .right-panel {
-    order: 6;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .chart-card {
-    order: 6;
-  }
-
-  .activity-card {
-    order: 7;
-  }
-
-  /* ================= STATS ================= */
-  .stats-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* ================= FORM ================= */
-  .form {
-    flex-direction: column;
-  }
-
-  .form input {
-    width: 100%;
-  }
-
-  /* ================= SEARCH ================= */
-  .search-input {
-    width: 100%;
-    max-width: 86%;
-  }
-
-  /* ================= BUTTONS ================= */
-  .export {
-    width: 100%;
-    text-align: center;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  /* ================= TABLE → CARD VIEW ================= */
-  .table table {
-    width: 100%;
-  }
-
-  .table thead {
-    display: none;
-  }
-
-  .table tbody tr {
-    display: block;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.05);
-  }
-
-  .table tbody td {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-  }
-
-  .table tbody td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    color: #94a3b8;
-  }
-
-  /* ================= CHART ================= */
-  .chart {
-    height: 120px;
-    gap: 6px;
-  }
-
-  .bar {
-    width: 20px;
-  }
-
-  /* ================= ACTIVITY ================= */
-  .activity-card li {
-    font-size: 14px;
-  }
 }
