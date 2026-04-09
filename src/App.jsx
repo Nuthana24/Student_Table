@@ -68,7 +68,11 @@ const [activities, setActivities] = useState(() => {
 
   // Edit
   const handleEdit = (student) => {
-    setForm(student);
+    setForm({
+  name: student.name,
+  email: student.email,
+  age: student.age,
+});
     setEditId(student.id);
   };
 
